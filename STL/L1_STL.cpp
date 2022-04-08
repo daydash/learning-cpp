@@ -1,3 +1,9 @@
+/*
+	This code is written by Striver (Raj) during his lecture on the youtube channel, CodeBeyond
+ 	Playlist link - https://www.youtube.com/playlist?list=PLN4aKSfpk8TQ6CqzMRDVUr-jEpObLiYdq
+	Video link - https://www.youtube.com/watch?v=iOOzYwBeXIM
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
