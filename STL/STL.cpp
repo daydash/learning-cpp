@@ -46,9 +46,9 @@ int main() {
 
 #ifndef ONLINE_JUDGE
 	// for getting input from input.txt
-	freopen("input.txt", "r", stdin);
+	freopen("D:/daydash/input.txt", "r", stdin);
 	// for getting input from output.txt
-	freopen("output.txt", "w", stdout);
+	freopen("D:/daydash/output.txt", "w", stdout);
 #endif
 	// start the code here
 
