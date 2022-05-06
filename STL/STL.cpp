@@ -359,8 +359,8 @@ int main() {
 		cout << endl;
 	}
 	cout << endl;
-	cout << endl;
-
+	cout << endl
+	     ;
 
 	vec_[2].push_back(1);
 
