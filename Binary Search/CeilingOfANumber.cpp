@@ -1,3 +1,24 @@
+/*
+
+// To find the ceiling of a number in the array
+
+Ceiling of a number is the smallest number greater than or equal to the target number
+
+Example: arr = {2, 3, 5, 9, 14, 16, 18};
+
+if target = 9, then answer will be 9
+if target = 15, then answer will be 16
+if target = 1, then answer will be 2
+if target = 4, then answer will be 5
+if target = 10, then answer will be 14
+if target = 12, then answer will be 14
+
+*/
+
+
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
