@@ -20,6 +20,17 @@ int ceilingOptimisedLogic(int arr[], int n, int x) {
 
 		mid = (l + u) / 2;
 	}
+
+	// the final positons where the loop will terminate will looks like
+	// 		upper_bond				target(not exist)				lower_bond
+
+	// 			|							|							|
+
+	// 	element less than				  {null}					element greater than
+	// 	the target element 											the target element
+
+	// Hence element present ar lower_bond index is your answer
+
 	return arr[l];
 }
 
