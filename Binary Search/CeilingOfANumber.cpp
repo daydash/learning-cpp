@@ -13,6 +13,9 @@ if target = 4, then answer will be 5
 if target = 10, then answer will be 14
 if target = 12, then answer will be 14
 
+what if the target is greater than the greatest number in the array?
+if target = 20, then answer will be nothing... we just return -1
+
 */
 
 
@@ -24,6 +27,9 @@ using namespace std;
 
 
 int ceilingOptimisedLogic(int arr[], int n, int x) {
+
+	if (x > arr[n - 1]) return -1;
+
 	int l = 0;
 	int u = n - 1;
 	int mid = n / 2;
@@ -35,14 +41,14 @@ int ceilingOptimisedLogic(int arr[], int n, int x) {
 		else if (arr[mid] < x) {
 			l = mid + 1;
 		}
-		else if (arr[mid] > x) {
+		else {
 			u = mid - 1;
 		}
 
 		mid = (l + u) / 2;
 	}
 
-	// the final positons where the loop will terminate will looks like
+	// the final positions where the loop will terminate will looks like
 	// 		upper_bond				target(not exist)				lower_bond
 
 	// 			|							|							|
