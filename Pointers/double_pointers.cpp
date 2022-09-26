@@ -10,7 +10,14 @@ int main() {
 	freopen("D:/daydash/output.txt", "w", stdout);
 #endif
 
+	int i = 10;
+	int *p = &i;
 
+	cout << i << endl;
+	cout << &i << endl;
+	cout << *p << endl;
+	cout << p << endl;
+	cout << &p << endl;
 
 	cout << endl;
 }

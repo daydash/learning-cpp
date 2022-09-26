@@ -16,8 +16,9 @@ int main() {
 	cout << &i << endl;			// 0x7bfe04
 
 	int * p  = &i;
-	cout << p << endl;			// 0x7bfe04
-	cout << *p << endl;			// 19
+	// cout << &p << endl;		// 0x7bfde8 -> address of p
+	cout << p << endl;			// 0x7bfe04 -> content of p
+	cout << *p << endl;			// 19 -> content at the location (i.e content of p)
 
 	float f = 10.2;
 	float * pf = &f;
@@ -66,10 +67,28 @@ int main() {
 	cout << y << endl;			// 3
 
 	int * yp;					// garbage address in yp's value
-	// int * yp = 0 			// always initialize a pointer will null
+	// int * yp = 0; 			// always initialize a pointer will null
+	// int * yp = nullptr; 		// always initialize a pointer will null
+	// int * yp = NULL; 		// always initialize a pointer will null
 	cout << yp << endl;															// 0x401519 -> some garbage address
 	cout << *yp << endl;		// printing the value at the garbage address	// 264275272 -> some garbage value at the garbage address
 	// (*yp)++; 				//never modify the unknown value, this might leads to the failure of the system
-	cout << *yp << endl;
+	// cout << *yp << endl;
 
+	//
+
+	i = 10;
+	*p = i;
+
+	cout << i << endl;			// 10
+	cout << &i << endl;			// 0x7bfdf4
+	cout << *p << endl;			// 10 -> content at the location (i.e content of p)
+	cout << p << endl;			// 0x7bfdf4 -> content of p
+	// cout << &p << endl;		// 0x7bfde8 -> address of p
+
+	//
+
+	int * q = p;				// q is a copy of
+	cout << q << endl;			// 0x7bfdf4
+	cout << *q << endl;			// 10
 }
