@@ -29,6 +29,6 @@ int main() {
 	int n;
 	cin >> n;
 
-	printLinearly( n);
+	printLinearly(n);
 	// printLinearly2(1, n - 1);
 }

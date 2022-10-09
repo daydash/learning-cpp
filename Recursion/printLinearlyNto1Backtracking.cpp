@@ -1,16 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void printLinearly(int i, int n) {
-	if (n == 0) return;
-	cout << i << ' ';
-	printLinearly(i + 1, n - 1);
-}
-
-void printLinearly2(int i, int n) {
+void printLinearlyNto1Backtracking(int i, int n) {
 	if (i > n) return;
+
+	printLinearlyNto1Backtracking(i + 1, n);
 	cout << i << ' ';
-	printLinearly(i + 1, n );
 }
 
 int main() {
@@ -23,6 +18,5 @@ int main() {
 	int n;
 	cin >> n;
 
-	// printLinearly(1, n);
-	printLinearly2(1, n - 1);
+	printLinearlyNto1Backtracking(1, n);
 }

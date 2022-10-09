@@ -9,7 +9,7 @@ int allIndex(int arr[], int n, int x, int output[]) {
 	if (input[0] == x) {
 		for (int i = smallAns - 1; i >= 0; i--) {
 			output[i + 1] = output[i] + 1;
-		}
+		} 3
 
 		output[0] = 0;
 		smallAns++;
