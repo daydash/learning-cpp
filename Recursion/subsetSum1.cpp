@@ -3,13 +3,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Brute Force : O(2^N * N)
+// go to all the powersets and store sum of their elements in vector<int> ans
+// also, sort them before printing
+/*
 void powerSetRecursive(int ind, vector<int> &ds, vector<int> &ans, vector<int> &arr, int n) {
 	int sum = 0;
 	if (ind == n) {
 		for (auto it : ds) {
 			sum += it;
 		}
-
 		ans.push_back(sum);
 		return;
 	}
@@ -19,9 +22,10 @@ void powerSetRecursive(int ind, vector<int> &ds, vector<int> &ans, vector<int> &
 	powerSetRecursive(ind + 1, ds, ans, arr, n);
 	ds.pop_back();
 
-	// not pick, or not take condition, this element is not added to your subsequence
+	// not pick
 	powerSetRecursive(ind + 1, ds, ans, arr, n);
 }
+*/
 
 int main() {
 
@@ -37,7 +41,7 @@ int main() {
 	vector<int> ans;
 	powerSetRecursive(0, ds, ans, arr, n);
 
-	sort(ans.begin(), ans.end());
+	// sort(ans.begin(), ans.end());
 	for (auto it : ans) {
 		cout << it << endl;
 	}
