@@ -12,7 +12,8 @@ void rev(vector <int> &nums, int k) {
 void rotate(vector<int>& nums, int k) {
 	k = k % nums.size(); //Calculating the appropriate size of k so as to prevent any index out of bounds
 	reverse(nums.begin(), nums.end()); // reversing the entire array
-	rev(nums, k); // reversing first k elements of the array
+	// rev(nums, k); // reversing first k elements of the array
+	reverse(nums.begin(), nums.begin() + k); // reversing the entire array
 	reverse(nums.begin() + k, nums.end()); //reversing reset of the (nums.size()-k) elements of the array
 }
 
