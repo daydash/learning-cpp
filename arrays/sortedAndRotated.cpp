@@ -1,8 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// WRONG ANSWER
+bool check(vector<int>& nums) {
+    int count = 0;
+    int n = nums.size();
+    for (int i = 1; i < n; i++) {
+        if (nums[i - 1] > nums[i]) count++;
+    }
+    if (nums[n - 1] > nums[0]) count++;
+    return count <= 1;
+}
 
+// WRONG ANSWER for [6 10 6]
+/*
 bool sorted(vector<int>& nums, int ind) {
     for (int i = 0; i < nums.size() - 1; i++) {
         if (!(nums[i] <= nums[i + 1]))
@@ -37,7 +47,7 @@ bool solve(vector<int> &nums) {
 
     // return true;
 }
-
+*/
 
 int main() {
 
@@ -60,7 +70,8 @@ int main() {
             nums.push_back(x);
         }
 
-        bool ans = solve(nums);
+        bool ans = check(nums);
+
         for (auto it : nums) cout << it << " ";
         cout << boolalpha << ans;
         cout << endl;
