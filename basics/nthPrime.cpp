@@ -30,3 +30,28 @@ int main() {
 		}
 	}
 }
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+#ifndef ONLINE_JUDGE
+	freopen("D:/daydash/input.txt", "r", stdin);
+	freopen("D:/daydash/output.txt", "w", stdout);
+#endif
+
+	int t;
+	cin >> t;
+
+	while (t--) {
+
+		int n;
+		cin >> n;
+
+
+		cout << endl;
+	}
+}
